@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slide {
+  @apply translate-x-0;
+}
+
+.btn {
+  @apply bg-secondary px-9 py-3 rounded-md font-bold capitalize hover:opacity-75 ease-in duration-200;
+}
+
+.card_btn {
+  @apply w-full px-9 py-3 bg-primaryDark rounded-md capitalize font-bold hover:bg-secondary ease-in duration-200;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-bold leading-snug;
+}
+.blob-1 {
+  @apply w-80 h-80 bg-blob absolute top-0 -left-5 -z-10 blur-2xl overflow-hidden opacity-30 rounded-full;
+}
+.blob-2 {
+  @apply w-80 h-80 bg-secondary absolute bottom-10 right-5 -z-10 blur-2xl overflow-hidden opacity-30 rounded-full;
+}
+
+.user-text {
+  display: none;
+}
+.user-text.active-text {
+  display: block;
+  animation: moveup 1s linear forwards;
+}
+
+.user-pic {
+  transition: all 0.2s ease;
+}
+
+.user-pic.active-pic {
+  border: 2px solid #ff7d3b;
+}
+
+@keyframes moveup {
+  0% {
+    margin-top: 40px;
+    opacity: 0;
+  }
+
+  50% {
+    margin-top: 20px;
+    opacity: 0.1;
+  }
+
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+/* switch btn */
+
+#toggleBtn:checked ~ label div.toggle-circle {
+  @apply translate-x-7;
+}
+
+#toggleBtn:checked ~ label div.bg-btn {
+  @apply bg-secondary;
+}
+
+.card {
+  perspective: 1000px;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.front {
+  overflow: hidden;
+}
