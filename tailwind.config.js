@@ -7,8 +7,8 @@ const rotateY = plugin(function ({ addUtilities }) {
     ".rotate-y-180": {
       transform: "rotateY(180deg)",
     },
-    ".-rotate-y-180": {
-      transform: "-rotateY(-180deg)",
+    ".rotate-y-360": {
+      transform: "rotateY(360deg)",
     },
   });
 });
@@ -29,10 +29,10 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: {
-        default: "20px",
-        md: "50px",
-      },
+      // padding: {
+      //   default: "20px",
+      //   md: "50px",
+      // },
     },
   },
   plugins: [rotateY],

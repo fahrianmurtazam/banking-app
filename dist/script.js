@@ -66,11 +66,11 @@ const card_3_back = document.querySelector("#card_3_back");
 
 toggleBtn.addEventListener("change", () => {
   card_1_front.classList.toggle("rotate-y-180");
-  card_1_back.classList.toggle("rotate-y-180");
+  card_1_back.classList.toggle("rotate-y-360");
 
   card_2_front.classList.toggle("rotate-y-180");
-  card_2_back.classList.toggle("rotate-y-180");
+  card_2_back.classList.toggle("rotate-y-360");
 
   card_3_front.classList.toggle("rotate-y-180");
-  card_3_back.classList.toggle("rotate-y-180");
+  card_3_back.classList.toggle("rotate-y-360");
 });
